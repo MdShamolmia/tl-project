@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w-full h-screen bg-no-repeat bg-cover " style="background-image: url('./assets/img/hero-bg.png')">
+
+        <!-- navbar start -->
+        <header class="bg-white">
+            <nav class="flex justify-between items-center w-[92%] mx-auto">
+                <div>
+                    <img class="" src="./assets/img/logo.png" alt="" />
+                </div>
+                <div
+                    class=" nav-links md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 md:py-6">
+                    <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-6">
+                        <li>
+                            <a class="hover:text-blue-600" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-blue-600" href="#">Service</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-blue-600" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-blue-600" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="flex items-center gap-6">
+                    <ion-icon name="logo-facebook" class="text-3xl cursor-pointer"></ion-icon>
+                    <ion-icon name="logo-twitter" class="text-3xl cursor-pointer"></ion-icon>
+                    <ion-icon onclick="onToggleMenu(this)" name="menu"
+                        class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                </div>
+            </nav>  
+        </header>
+        <!-- mobile -->
+        <div class=" relative  flex items-center justify-center">
+            <div class=" absolute top-72 left-40">
+                <img src="./assets/img/iphone-1.png" alt="">
+            </div>
+            <div class="absolute right-40 top-72 pl-2 md:top-52">
+                <h1 class="md:text-4xl pb-5 text-white ">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Amet, ratione.
+                </h1>
+                <p class="md:text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Adipisci, libero <br>
+                    tenetur. Vitae ullam alias
+                    odit
+                    placeat quae adipisci aperiam voluptas.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- mobile section start -->
+    <section class="bg-white py-40">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="text-center">
+                <h1 class="text-5xl p-4">Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.  Ipsum ducimus <br> modi sequi odio, iusto reiciendis natus culpa cum error? Id.</p>
+            </div>
+            <div>
+                <img src="./assets/img/iphone-2.png" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- mobile section end -->
+    <!-- apps store -->
+    <section class="bg-blue-100 py-20">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-2">
+            <div>
+                <img src="./assets/img/appstore.png" alt="">
+            </div>
+            <div>
+                <img src="./assets/img/playstore.png" alt="">
+
+            </div>
+            <div class="text-center">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe ullam architecto voluptatum eius est
+                    vitae dolores voluptate dolore porro sapiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="h-20 bg-black flex items-center justify-center">
+        <h3 class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aut.</h3>
+    </footer>
+
+    <!-- scripts -->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === "menu" ? "close" : "menu"
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+</body>
+
+</html>
